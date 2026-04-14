@@ -1,17 +1,70 @@
-# chatbot_app
 
-A new Flutter project.
+## 🌟 نظرة عامة
 
-## Getting Started
+**Chat MYA** هو تطبيق محادثة ذكي مفتوح المصدر، يجمع بين أحدث تقنيات الذكاء الاصطناعي وتجربة مستخدم ساحرة.  
+صُمم التطبيق ليكون رفيقك الرقمي اليومي، حيث يمكنك من إجراء محادثات طبيعية، تحليل الصور، استخدام الأوامر الصوتية، وتنظيم سجل محادثاتك بكل سهولة.
 
-This project is a starting point for a Flutter application.
+> **ملاحظة:** التطبيق يتطلب مفتاح API من [OpenRouter](https://openrouter.ai/) ليعمل بشكل كامل.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## ✨ المميزات الرئيسية
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **🧠 محادثات متدفقة (Streaming)** – استقبل الردود كلمةً كلمة بتجربة سلسة وسريعة.
+- **🖼️ دعم تحليل الصور (Vision)** – حمّل صورة ودع MYA يصفها لك بدقة باستخدام `GPT-4o-mini`.
+- **🎤 إدخال صوتي** – تحدث بحرية وسيتم تحويل كلامك إلى نص تلقائياً.
+- **💬 إدارة متعددة للمحادثات** – أنشئ عدداً لا نهائياً من المحادثات، وبدّل بينها، واحذف ما تريد.
+- **🎨 واجهة نيون داكنة** – تصميم عصري بتأثيرات زجاجية (Glassmorphism) ومتوهجة (Glow) مريحة للعين.
+- **📱 دعم كامل لأندرويد** – شاشة بداية مخصصة وأيقونة تطبيق احترافية.
+- **📂 تخزين محلي آمن** – تُحفظ جميع محادثاتك على جهازك فقط باستخدام `GetStorage`.
+- **🧩 مفتوح المصدر بالكامل** – اطّلع على الكود، عدّله، وساهم في تطويره.
+
+---
+
+## 📸 لقطات من التطبيق
+
+| الشاشة الرئيسية | القائمة الجانبية | المحادثة مع الصور |
+
+![Vision](https://github.com/user-attachments/assets/77cbd987-367a-4579-8dd5-839f4bccb320)
+![welcom page](https://github.com/user-attachments/assets/868a5019-0ae4-4ffe-8908-6a9c38b202f3)
+![home page](https://github.com/user-attachments/assets/8fd0f7c5-8b48-4c5b-badb-a8dff5d7c729)
+
+---
+
+## 🚀 التنزيل والتثبيت
+
+### 📲 تحميل النسخة الجاهزة (APK)
+يمكنك تنزيل أحدث نسخة من التطبيق مباشرة من صفحة [الإصدارات (Releases)](https://github.com/MohmedYahiaAlmhdi/Chat-MYA/releases).
+
+1. اذهب إلى قسم **Releases**.
+2. حمّل ملف `app-release.apk` من أحدث إصدار.
+3. ثبّته على جهاز Android (قد تحتاج لتفعيل خيار "تثبيت التطبيقات من مصادر غير معروفة").
+
+### 🛠️ البناء من المصدر (للمطورين)
+
+**المتطلبات الأساسية:**
+- Flutter SDK (3.24 أو أحدث)
+- Android Studio / VS Code
+- Git
+
+**خطوات التشغيل:**
+```bash
+# 1. استنساخ المستودع
+git clone https://github.com/MohmedYahiaAlmhdi/Chat-MYA.git
+cd Chat-MYA
+
+# 2. الحصول على الحزم
+flutter pub get
+
+# 3. إعداد ملف البيئة (.env)
+# انسخ ملف .env.example إلى ملف جديد باسم .env
+cp .env.example .env
+# ثم افتح ملف .env وأضف مفتاح OpenRouter API الخاص بك:
+# API_KEY=sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxx
+
+# 4. توليد شاشة البداية والأيقونة (اختياري)
+dart run flutter_native_splash:create
+dart run flutter_launcher_icons
+
+# 5. تشغيل التطبيق
+flutter run
